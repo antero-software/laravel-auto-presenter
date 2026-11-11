@@ -32,7 +32,7 @@ class MethodNotFoundException extends NotFoundException
      *
      * @return void
      */
-    public function __construct(string $class, string $method, string $message = null)
+    public function __construct(string $class, string $method, ?string $message = null)
     {
         $this->method = $method;
 
