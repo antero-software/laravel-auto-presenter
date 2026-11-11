@@ -82,10 +82,7 @@ class PaginatorDecorator implements DecoratorInterface
     {
         $object = new ReflectionObject($subject);
 
-        $items = $object->getProperty('items');
-        $items->setAccessible(true);
-
-        return $items->getValue($subject);
+        return $object->getProperty('items')->getValue($subject);
     }
 
     /**

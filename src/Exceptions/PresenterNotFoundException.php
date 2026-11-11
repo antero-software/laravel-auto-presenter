@@ -24,7 +24,7 @@ class PresenterNotFoundException extends NotFoundException
      *
      * @return void
      */
-    public function __construct(string $class, string $message = null)
+    public function __construct(string $class, ?string $message = null)
     {
         if (!$message) {
             $message = "The presenter class '$class' was not found.";
